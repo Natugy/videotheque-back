@@ -33,6 +33,6 @@ class FilmController(private val filmService: FilmService){
     @PostMapping("/update")
     fun update(@RequestParam title: String, @RequestParam isFav : Boolean) = filmService.updateFilm(title, isFav)
 
-    @PostMapping("/delete")
+    @DeleteMapping("/delete")
     fun delete(@RequestParam title: String) = filmService.deleteFilm(title)
 }
